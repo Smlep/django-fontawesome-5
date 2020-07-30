@@ -1,16 +1,16 @@
 # django-fontawesome-5
 
 A utility for using icons in models, forms, and templates.
-Does support Django 3.0, which *django-fontawesome* will not.
+Does support Django 3.0, which [django-fontawesome](https://github.com/redouane/django-fontawesome) will not.
 
 ![Clip of dropdown](https://github.com/BenjjinF/django-fontawesome/blob/master/docs/images/django-fontawesome-5.gif)
 
 ## Migration guide from django-fontawesome
 
-1. Remove all occurences of     {% fontawesome_stylesheet %}
-1. Replace {% load fontawesome %} with {% load fontawesome_5 %}
-1. Replace '{% fontawesome_icon' with '{% fa5_icon'
-1. Replace iconnames, for example "bell" needs to be replaced with "bell fas" and "linedin-square" with "linkedin fab"
+1. Remove all occurences of `{% fontawesome_stylesheet %}`
+2. Replace `{% load fontawesome %}` with `{% load fontawesome_5 %}`
+3. Replace `{% fontawesome_icon` with `{% fa5_icon`
+4. Replace icon names, for example "bell" needs to be replaced with "bell fas" and "linkedin-square" with "linkedin fab"
 
 ## Installation / Usage
 
@@ -33,7 +33,7 @@ Import and use `IconField`:
         icon = IconField()
 
 
-Include Static Files
+Include Static Files:
 
     {% load fontawesome_5 %}
 
@@ -44,7 +44,7 @@ Include Static Files
 
 ## Settings
 
-You can configure django-fontawesome to use another release/source/cdn by specifying::
+You can configure django-fontawesome to use another release/source/cdn by specifying:
 
     FONTAWESOME_5_CSS = URL or None
         default: 'fontawesome_5/css/django-fontawesome.css'
@@ -57,7 +57,7 @@ You can configure django-fontawesome to use another release/source/cdn by specif
 
 ## Rendering
 
-You can do a simple render  in your template like this:
+You can do a simple render in your template like this:
     
     {% for category in categories.all %}
         {% if category.icon %}
